@@ -8,7 +8,7 @@
 
     Now you have an open web service with URL = https://jsonplaceholder.typicode.com/todos
 
-    ##Requirement 1:
+##Requirement 1:
 
     This is a list of todos composed of < userId, Id, title, completed >, you should create a batch job that:
 
@@ -25,13 +25,13 @@
     Suggestion:
     Make the service smart, everytime that you check the webservice don't recreate the task, check which task are already there.
 
-    ##Requirement 2:
+##Requirement 2:
 
     For every task in a case marked as “completed” the related opportunity value (amount) must increase by 1%
 
 ## Issues
 
-    ###1. How was achieve not inserting a task twice?
+###1. How was achieve not inserting a task twice?
 
     In the task object there is custom field used as an external Id, named 'External Id'. This field is marked as an external Id,
     and furthermore also as a unique one.
@@ -41,13 +41,13 @@
 
     These 2 features of the implementation allow us to make sure that a task, with a particular external id, is not entered twice.
 
-    *Note:
+    Note:
 
     This strategy doesn't work if the external API doesn't guarantee that the all the tasks for different owners, have different external ids.
 
     Also, if the external id is empty from the records fetched from the API, might result in potential duplicates.
 
-    ###2. Usage of the batch class instead of a @future for example:
+###2. Usage of the batch class instead of a @future for example:
 
     The batch class usage in this implementation may not be the appropriate solution to go with as the business logic itself is bound
     primarily to the external data coming from the web service rather then from data within Salesforce.
