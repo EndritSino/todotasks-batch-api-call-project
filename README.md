@@ -31,7 +31,7 @@
 
 ## Issues
 
-###1. How was achieve not inserting a task twice?
+### How does the implementation avoid not inserting a task twice?
 
     In the task object there is custom field used as an external Id, named 'External Id'. This field is marked as an external Id,
     and furthermore also as a unique one.
@@ -47,10 +47,9 @@
 
     Also, if the external id is empty from the records fetched from the API, might result in potential duplicates.
 
-###2. Usage of the batch class instead of a @future for example:
+### (In)Appropriate usage of the batch class instead of a @future for example:
 
-    The batch class usage in this implementation may not be the appropriate solution to go with as the business logic itself is bound
-    primarily to the external data coming from the web service rather then from data within Salesforce.
+    I believe that the batch class usage in this implementation may not be the appropriate solution to go with as the business logic itself is bound primarily to the external data coming from the web service rather then from data within Salesforce.
 
     To better explain when would be the case when the batch would've made sense:
     If we would be interested to create tasks coming from an external system only for a specific set of records within Salesforce.
