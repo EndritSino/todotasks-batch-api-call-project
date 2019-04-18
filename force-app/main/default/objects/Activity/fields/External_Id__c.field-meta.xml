@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Id__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>Id used to identify tasks created through the external services and the daily batch jobs.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Id used to identify tasks created through the external services and the daily batch jobs.</inlineHelpText>
+    <label>External Id</label>
+    <length>18</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>
